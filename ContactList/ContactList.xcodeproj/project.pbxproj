@@ -8,13 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		AE901CE41FD6FC450016DF95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE901CE31FD6FC450016DF95 /* AppDelegate.swift */; };
-		AE901CE61FD6FC450016DF95 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE901CE51FD6FC450016DF95 /* ViewController.swift */; };
 		AE901CE91FD6FC450016DF95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE901CE71FD6FC450016DF95 /* Main.storyboard */; };
 		AE901CEC1FD6FC450016DF95 /* ContactList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AE901CEA1FD6FC450016DF95 /* ContactList.xcdatamodeld */; };
 		AE901CEE1FD6FC450016DF95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE901CED1FD6FC450016DF95 /* Assets.xcassets */; };
 		AE901CF11FD6FC450016DF95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE901CEF1FD6FC450016DF95 /* LaunchScreen.storyboard */; };
 		AE901CFC1FD6FC450016DF95 /* ContactListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE901CFB1FD6FC450016DF95 /* ContactListTests.swift */; };
 		AE901D071FD6FC450016DF95 /* ContactListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE901D061FD6FC450016DF95 /* ContactListUITests.swift */; };
+		AE901D151FD6FFF80016DF95 /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE901D141FD6FFF80016DF95 /* APIHandler.swift */; };
+		AE901D181FD704B50016DF95 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE901D171FD704B50016DF95 /* ContactsViewController.swift */; };
+		AE901D1B1FD706330016DF95 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE901D1A1FD706330016DF95 /* Contact.swift */; };
+		AE901D1D1FD706430016DF95 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE901D1C1FD706430016DF95 /* Address.swift */; };
+		AE901D1F1FD706520016DF95 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE901D1E1FD706520016DF95 /* Company.swift */; };
+		AE901D231FD70ACC0016DF95 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE901D221FD70ACC0016DF95 /* BaseViewController.swift */; };
+		AE901D251FD70BAE0016DF95 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE901D241FD70BAE0016DF95 /* ContactTableViewCell.swift */; };
+		AE901D271FD70E9C0016DF95 /* ContactRequestResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE901D261FD70E9C0016DF95 /* ContactRequestResponseHandler.swift */; };
+		AE901D291FD710910016DF95 /* ContactDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE901D281FD710910016DF95 /* ContactDataParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +45,6 @@
 /* Begin PBXFileReference section */
 		AE901CE01FD6FC450016DF95 /* ContactList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE901CE31FD6FC450016DF95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AE901CE51FD6FC450016DF95 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AE901CE81FD6FC450016DF95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AE901CEB1FD6FC450016DF95 /* ContactList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ContactList.xcdatamodel; sourceTree = "<group>"; };
 		AE901CED1FD6FC450016DF95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +56,15 @@
 		AE901D021FD6FC450016DF95 /* ContactListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContactListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE901D061FD6FC450016DF95 /* ContactListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListUITests.swift; sourceTree = "<group>"; };
 		AE901D081FD6FC450016DF95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE901D141FD6FFF80016DF95 /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
+		AE901D171FD704B50016DF95 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		AE901D1A1FD706330016DF95 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		AE901D1C1FD706430016DF95 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		AE901D1E1FD706520016DF95 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		AE901D221FD70ACC0016DF95 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		AE901D241FD70BAE0016DF95 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		AE901D261FD70E9C0016DF95 /* ContactRequestResponseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRequestResponseHandler.swift; sourceTree = "<group>"; };
+		AE901D281FD710910016DF95 /* ContactDataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDataParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +115,12 @@
 		AE901CE21FD6FC450016DF95 /* ContactList */ = {
 			isa = PBXGroup;
 			children = (
+				AE901D191FD705620016DF95 /* Model */,
+				AE901D161FD704720016DF95 /* Contacts List */,
 				AE901CE31FD6FC450016DF95 /* AppDelegate.swift */,
-				AE901CE51FD6FC450016DF95 /* ViewController.swift */,
+				AE901D221FD70ACC0016DF95 /* BaseViewController.swift */,
 				AE901CE71FD6FC450016DF95 /* Main.storyboard */,
+				AE901D141FD6FFF80016DF95 /* APIHandler.swift */,
 				AE901CED1FD6FC450016DF95 /* Assets.xcassets */,
 				AE901CEF1FD6FC450016DF95 /* LaunchScreen.storyboard */,
 				AE901CF21FD6FC450016DF95 /* Info.plist */,
@@ -126,6 +145,27 @@
 				AE901D081FD6FC450016DF95 /* Info.plist */,
 			);
 			path = ContactListUITests;
+			sourceTree = "<group>";
+		};
+		AE901D161FD704720016DF95 /* Contacts List */ = {
+			isa = PBXGroup;
+			children = (
+				AE901D171FD704B50016DF95 /* ContactsViewController.swift */,
+				AE901D241FD70BAE0016DF95 /* ContactTableViewCell.swift */,
+				AE901D261FD70E9C0016DF95 /* ContactRequestResponseHandler.swift */,
+				AE901D281FD710910016DF95 /* ContactDataParser.swift */,
+			);
+			path = "Contacts List";
+			sourceTree = "<group>";
+		};
+		AE901D191FD705620016DF95 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AE901D1A1FD706330016DF95 /* Contact.swift */,
+				AE901D1C1FD706430016DF95 /* Address.swift */,
+				AE901D1E1FD706520016DF95 /* Company.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,7 +302,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE901CE61FD6FC450016DF95 /* ViewController.swift in Sources */,
+				AE901D1D1FD706430016DF95 /* Address.swift in Sources */,
+				AE901D151FD6FFF80016DF95 /* APIHandler.swift in Sources */,
+				AE901D271FD70E9C0016DF95 /* ContactRequestResponseHandler.swift in Sources */,
+				AE901D181FD704B50016DF95 /* ContactsViewController.swift in Sources */,
+				AE901D1B1FD706330016DF95 /* Contact.swift in Sources */,
+				AE901D231FD70ACC0016DF95 /* BaseViewController.swift in Sources */,
+				AE901D1F1FD706520016DF95 /* Company.swift in Sources */,
+				AE901D291FD710910016DF95 /* ContactDataParser.swift in Sources */,
+				AE901D251FD70BAE0016DF95 /* ContactTableViewCell.swift in Sources */,
 				AE901CEC1FD6FC450016DF95 /* ContactList.xcdatamodeld in Sources */,
 				AE901CE41FD6FC450016DF95 /* AppDelegate.swift in Sources */,
 			);

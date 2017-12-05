@@ -1,24 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Contacts View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContactsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ContactsViewController" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZGR-3D-DRD"/>
+                        <viewControllerLayoutGuide type="bottom" id="wZs-Jx-ogJ"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="adx-Zz-qXE">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="637"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactTableViewCell" rowHeight="83" id="Ygz-cS-h52" customClass="ContactTableViewCell" customModule="ContactList" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="83"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ygz-cS-h52" id="uk7-Cw-y2d">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="82.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="SCA-Ik-Tdg"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="39X-qj-LDt"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YaY-7B-PrV">
+                                <rect key="frame" x="0.0" y="637" width="187.5" height="30"/>
+                                <state key="normal" title="Ascending"/>
+                                <connections>
+                                    <action selector="ascending:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TxX-hg-nUR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2O-ji-Szh">
+                                <rect key="frame" x="187.5" y="637" width="187.5" height="30"/>
+                                <state key="normal" title="Descending"/>
+                                <connections>
+                                    <action selector="descending:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fEn-lt-1Gw"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="g2O-ji-Szh" firstAttribute="width" secondItem="YaY-7B-PrV" secondAttribute="width" id="1Uk-pr-gck"/>
+                            <constraint firstItem="wZs-Jx-ogJ" firstAttribute="top" secondItem="g2O-ji-Szh" secondAttribute="bottom" id="4Ne-lq-m4Q"/>
+                            <constraint firstItem="g2O-ji-Szh" firstAttribute="top" secondItem="adx-Zz-qXE" secondAttribute="bottom" id="D2x-Gt-lef"/>
+                            <constraint firstItem="g2O-ji-Szh" firstAttribute="top" secondItem="YaY-7B-PrV" secondAttribute="top" id="FpZ-zf-rgc"/>
+                            <constraint firstItem="YaY-7B-PrV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PDg-Gw-mXE"/>
+                            <constraint firstItem="g2O-ji-Szh" firstAttribute="leading" secondItem="YaY-7B-PrV" secondAttribute="trailing" id="Q58-HR-sw1"/>
+                            <constraint firstItem="adx-Zz-qXE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RMR-LH-H5K"/>
+                            <constraint firstItem="g2O-ji-Szh" firstAttribute="bottom" secondItem="YaY-7B-PrV" secondAttribute="bottom" id="XJz-Wr-SOS"/>
+                            <constraint firstItem="adx-Zz-qXE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="d0b-NC-MUw"/>
+                            <constraint firstAttribute="trailing" secondItem="g2O-ji-Szh" secondAttribute="trailing" id="onU-A4-UXf"/>
+                            <constraint firstItem="g2O-ji-Szh" firstAttribute="height" secondItem="YaY-7B-PrV" secondAttribute="height" id="tk3-6V-Mgd"/>
+                            <constraint firstItem="adx-Zz-qXE" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="yZN-Dc-ybu"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="contactsTableView" destination="adx-Zz-qXE" id="6Kl-L6-oP1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
         </scene>
     </scenes>
 </document>
