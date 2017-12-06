@@ -9,7 +9,7 @@
 import UIKit
 
 struct URLConstant {
-    static let apiPath = "http://jsonplaceholder.typicode.com/userss"
+    static let apiPath = "http://jsonplaceholder.typicode.com/users"
 }
 
 class ContactsViewController: BaseViewController {
