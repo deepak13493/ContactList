@@ -25,13 +25,40 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="637"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactTableViewCell" rowHeight="83" id="Ygz-cS-h52" customClass="ContactTableViewCell" customModule="ContactList" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="ContactTableViewCell" rowHeight="83" id="Ygz-cS-h52" customClass="ContactTableViewCell" customModule="ContactList" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="83"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ygz-cS-h52" id="uk7-Cw-y2d">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="82.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="308" height="82.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfY-d4-0gc">
+                                                    <rect key="frame" x="20" y="10" width="268" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ju0-W7-jvM">
+                                                    <rect key="frame" x="20" y="35.5" width="268" height="37"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ju0-W7-jvM" firstAttribute="top" secondItem="tfY-d4-0gc" secondAttribute="bottom" constant="5" id="2ov-j3-sJ4"/>
+                                                <constraint firstItem="tfY-d4-0gc" firstAttribute="top" secondItem="uk7-Cw-y2d" secondAttribute="top" constant="10" id="2vp-2N-4xj"/>
+                                                <constraint firstItem="tfY-d4-0gc" firstAttribute="leading" secondItem="uk7-Cw-y2d" secondAttribute="leading" constant="20" id="ASA-oj-8hn"/>
+                                                <constraint firstAttribute="bottom" secondItem="ju0-W7-jvM" secondAttribute="bottom" constant="10" id="DGV-wM-mnm"/>
+                                                <constraint firstItem="ju0-W7-jvM" firstAttribute="leading" secondItem="tfY-d4-0gc" secondAttribute="leading" id="ONT-pz-LWb"/>
+                                                <constraint firstItem="ju0-W7-jvM" firstAttribute="trailing" secondItem="tfY-d4-0gc" secondAttribute="trailing" id="TQu-6J-wlC"/>
+                                                <constraint firstAttribute="trailing" secondItem="tfY-d4-0gc" secondAttribute="trailing" constant="20" id="Tfq-U1-uQ3"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="email" destination="ju0-W7-jvM" id="Nob-Ck-9fX"/>
+                                            <outlet property="name" destination="tfY-d4-0gc" id="r2h-E3-rPG"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -71,7 +98,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="ascendingButton" destination="YaY-7B-PrV" id="fP7-AB-GCv"/>
                         <outlet property="contactsTableView" destination="adx-Zz-qXE" id="6Kl-L6-oP1"/>
+                        <outlet property="descendingButton" destination="g2O-ji-Szh" id="x0r-hr-LD5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

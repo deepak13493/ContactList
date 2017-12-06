@@ -10,6 +10,9 @@ import UIKit
 
 class ContactTableViewCell: UITableViewCell {
 
+    @IBOutlet private weak var name: UILabel!
+    @IBOutlet private weak var email: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,6 +22,11 @@ class ContactTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func configure(cell name: String?, email: String?)  {
+        self.name.text = name
+        self.email.text = email
     }
 
 }

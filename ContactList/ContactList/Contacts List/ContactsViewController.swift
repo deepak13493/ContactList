@@ -14,14 +14,21 @@ struct URLConstant {
 
 class ContactsViewController: BaseViewController {
     
+    //MARK:- property
     var contacts = [Contact]()
-    @IBOutlet weak var contactsTableView: UITableView!
     
+    //MARK:- private IBOutlets
+    @IBOutlet private weak var contactsTableView: UITableView!
+    @IBOutlet private weak var ascendingButton: UIButton!
+    @IBOutlet private weak var descendingButton: UIButton!
+    
+    //MARK:- view controller life cycle methods
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         var contactRequestResponseHandler = ContactRequestResponseHandler()
-
+        contactsTableView.tableFooterView = UIView()
         showActivityView()
         DispatchQueue.global(qos: .background).async { [weak self] in
                         
@@ -31,8 +38,7 @@ class ContactsViewController: BaseViewController {
                     
                     if let contacts = contacts {
                         self?.contacts = contacts
-                        self?.contactsTableView.reloadData()
-                        
+                        self?.selectAscending()
                     } else {
                         let alert = UIAlertController(title: "Alert", message: "Please check your Network", preferredStyle: UIAlertControllerStyle.alert)
                         
@@ -57,11 +63,31 @@ class ContactsViewController: BaseViewController {
     //MARK:- IBActions
     
     @IBAction func ascending(_ sender: Any) {
-        
+        self.selectAscending()
     }
     
     @IBAction func descending(_ sender: Any) {
+        self.selectDescending()
+    }
+    
+    //MARK:- private helper method
+    private func selectAscending() {
+        descendingButton.titleLabel?.textColor = UIColor.gray
+        contacts.sort(by: {
+            guard let name = $0.name, let name1 = $1.name else { return false }
+            return name < name1
+        })
+        contactsTableView.reloadData()
         
+    }
+    
+    private func selectDescending() {
+        ascendingButton.titleLabel?.textColor = UIColor.gray
+        contacts.sort(by: {
+            guard let name = $0.name, let name1 = $1.name else { return false }
+            return name > name1
+        })
+        contactsTableView.reloadData()
     }
     
 }
@@ -76,7 +102,8 @@ extension ContactsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let contactTableViewCell =  tableView.dequeueReusableCell(withIdentifier: String(describing: ContactTableViewCell.self), for: indexPath) as! ContactTableViewCell
-        //issueTableViewCell.configureCell(issues?[indexPath.row].title, details: issues?[indexPath.row].details)
+        let contact = contacts[indexPath.row]
+        contactTableViewCell.configure(cell: contact.name, email: contact.email)
         
         return contactTableViewCell
     }
