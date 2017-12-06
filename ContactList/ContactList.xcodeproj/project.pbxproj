@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0095112B1FD81EEF008909EA /* ContactDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0095112A1FD81EEF008909EA /* ContactDetailsViewController.swift */; };
+		0095112D1FD8353E008909EA /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0095112C1FD8353E008909EA /* ActivityView.swift */; };
 		AE901CE41FD6FC450016DF95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE901CE31FD6FC450016DF95 /* AppDelegate.swift */; };
 		AE901CE91FD6FC450016DF95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE901CE71FD6FC450016DF95 /* Main.storyboard */; };
 		AE901CEC1FD6FC450016DF95 /* ContactList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AE901CEA1FD6FC450016DF95 /* ContactList.xcdatamodeld */; };
@@ -20,7 +21,6 @@
 		AE901D1B1FD706330016DF95 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE901D1A1FD706330016DF95 /* Contact.swift */; };
 		AE901D1D1FD706430016DF95 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE901D1C1FD706430016DF95 /* Address.swift */; };
 		AE901D1F1FD706520016DF95 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE901D1E1FD706520016DF95 /* Company.swift */; };
-		AE901D231FD70ACC0016DF95 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE901D221FD70ACC0016DF95 /* BaseViewController.swift */; };
 		AE901D251FD70BAE0016DF95 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE901D241FD70BAE0016DF95 /* ContactTableViewCell.swift */; };
 		AE901D271FD70E9C0016DF95 /* ContactRequestResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE901D261FD70E9C0016DF95 /* ContactRequestResponseHandler.swift */; };
 		AE901D291FD710910016DF95 /* ContactDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE901D281FD710910016DF95 /* ContactDataParser.swift */; };
@@ -45,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		0095112A1FD81EEF008909EA /* ContactDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailsViewController.swift; sourceTree = "<group>"; };
+		0095112C1FD8353E008909EA /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		AE901CE01FD6FC450016DF95 /* ContactList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE901CE31FD6FC450016DF95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE901CE81FD6FC450016DF95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,7 +64,6 @@
 		AE901D1A1FD706330016DF95 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		AE901D1C1FD706430016DF95 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		AE901D1E1FD706520016DF95 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
-		AE901D221FD70ACC0016DF95 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		AE901D241FD70BAE0016DF95 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 		AE901D261FD70E9C0016DF95 /* ContactRequestResponseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRequestResponseHandler.swift; sourceTree = "<group>"; };
 		AE901D281FD710910016DF95 /* ContactDataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDataParser.swift; sourceTree = "<group>"; };
@@ -129,13 +129,13 @@
 				AE901D191FD705620016DF95 /* Model */,
 				AE901D161FD704720016DF95 /* Contacts List */,
 				AE901CE31FD6FC450016DF95 /* AppDelegate.swift */,
-				AE901D221FD70ACC0016DF95 /* BaseViewController.swift */,
 				AE901CE71FD6FC450016DF95 /* Main.storyboard */,
 				AE901D141FD6FFF80016DF95 /* APIHandler.swift */,
 				AE901CED1FD6FC450016DF95 /* Assets.xcassets */,
 				AE901CEF1FD6FC450016DF95 /* LaunchScreen.storyboard */,
 				AE901CF21FD6FC450016DF95 /* Info.plist */,
 				AE901CEA1FD6FC450016DF95 /* ContactList.xcdatamodeld */,
+				0095112C1FD8353E008909EA /* ActivityView.swift */,
 			);
 			path = ContactList;
 			sourceTree = "<group>";
@@ -315,11 +315,11 @@
 			files = (
 				AE901D1D1FD706430016DF95 /* Address.swift in Sources */,
 				AE901D151FD6FFF80016DF95 /* APIHandler.swift in Sources */,
+				0095112D1FD8353E008909EA /* ActivityView.swift in Sources */,
 				0095112B1FD81EEF008909EA /* ContactDetailsViewController.swift in Sources */,
 				AE901D271FD70E9C0016DF95 /* ContactRequestResponseHandler.swift in Sources */,
 				AE901D181FD704B50016DF95 /* ContactsViewController.swift in Sources */,
 				AE901D1B1FD706330016DF95 /* Contact.swift in Sources */,
-				AE901D231FD70ACC0016DF95 /* BaseViewController.swift in Sources */,
 				AE901D1F1FD706520016DF95 /* Company.swift in Sources */,
 				AE901D291FD710910016DF95 /* ContactDataParser.swift in Sources */,
 				AE901D251FD70BAE0016DF95 /* ContactTableViewCell.swift in Sources */,

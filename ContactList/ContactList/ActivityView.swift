@@ -1,16 +1,21 @@
 //
-//  BaseViewController.swift
+//  ActivityView.swift
 //  ContactList
 //
-//  Created by Deepak Sharma on 05/12/17.
+//  Created by Deepak Sharma on 06.12.17.
 //  Copyright © 2017 Deepak Sharma. All rights reserved.
 //
 
 import UIKit
 
-class BaseViewController: UIViewController {
-
-    let activityView = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+class ActivityView {
+    
+    private let activityView = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+    private var view: UIView!
+    
+    init(view: UIView) {
+        self.view = view
+    }
     
     func showActivityView()  {
         
@@ -24,9 +29,9 @@ class BaseViewController: UIViewController {
             self?.view.addSubview(self!.activityView)
             
         }
-    }
+    } 
     
-    func hideActivityView()  {
+     func hideActivityView()  {
         
         DispatchQueue.main.async {[weak self] in
             self?.view.isUserInteractionEnabled = true

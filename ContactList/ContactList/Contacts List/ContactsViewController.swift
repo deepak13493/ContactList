@@ -12,7 +12,7 @@ struct URLConstant {
     static let apiPath = "http://jsonplaceholder.typicode.com/users"
 }
 
-class ContactsViewController: BaseViewController {
+class ContactsViewController: UIViewController {
     
     //MARK:- property
     var contacts = [Contact]()
@@ -29,7 +29,10 @@ class ContactsViewController: BaseViewController {
         
         var contactRequestResponseHandler = ContactRequestResponseHandler()
         contactsTableView.tableFooterView = UIView()
-        showActivityView()
+        
+        let activityView = ActivityView(view: self.view)
+        
+        activityView.showActivityView()
         DispatchQueue.global(qos: .background).async { [weak self] in
                         
             contactRequestResponseHandler.fetchContacts(URLConstant.apiPath) { [weak self] (contacts) in
@@ -46,7 +49,7 @@ class ContactsViewController: BaseViewController {
                         }))
                         self?.present(alert, animated: true, completion: nil)
                     }
-                    self?.hideActivityView()
+                    activityView.hideActivityView()
                     
                 }
                 
