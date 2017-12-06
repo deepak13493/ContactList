@@ -70,6 +70,17 @@ class ContactsViewController: BaseViewController {
         self.selectDescending()
     }
     
+    //MARK:- segue method
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let indexPath = contactsTableView.indexPathForSelectedRow {
+            let contactDetailsViewController = segue.destination as! ContactDetailsViewController
+            contactDetailsViewController.selectedContact = contacts[indexPath.row]
+        }
+        
+    }
+    
+    
     //MARK:- private helper method
     private func selectAscending() {
         descendingButton.titleLabel?.textColor = UIColor.gray

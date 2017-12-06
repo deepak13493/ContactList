@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0095112B1FD81EEF008909EA /* ContactDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0095112A1FD81EEF008909EA /* ContactDetailsViewController.swift */; };
 		AE901CE41FD6FC450016DF95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE901CE31FD6FC450016DF95 /* AppDelegate.swift */; };
 		AE901CE91FD6FC450016DF95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE901CE71FD6FC450016DF95 /* Main.storyboard */; };
 		AE901CEC1FD6FC450016DF95 /* ContactList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AE901CEA1FD6FC450016DF95 /* ContactList.xcdatamodeld */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0095112A1FD81EEF008909EA /* ContactDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailsViewController.swift; sourceTree = "<group>"; };
 		AE901CE01FD6FC450016DF95 /* ContactList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE901CE31FD6FC450016DF95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE901CE81FD6FC450016DF95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -92,6 +94,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		009511291FD81EAB008909EA /* Contact Details */ = {
+			isa = PBXGroup;
+			children = (
+				0095112A1FD81EEF008909EA /* ContactDetailsViewController.swift */,
+			);
+			path = "Contact Details";
+			sourceTree = "<group>";
+		};
 		AE901CD71FD6FC450016DF95 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +125,7 @@
 		AE901CE21FD6FC450016DF95 /* ContactList */ = {
 			isa = PBXGroup;
 			children = (
+				009511291FD81EAB008909EA /* Contact Details */,
 				AE901D191FD705620016DF95 /* Model */,
 				AE901D161FD704720016DF95 /* Contacts List */,
 				AE901CE31FD6FC450016DF95 /* AppDelegate.swift */,
@@ -304,6 +315,7 @@
 			files = (
 				AE901D1D1FD706430016DF95 /* Address.swift in Sources */,
 				AE901D151FD6FFF80016DF95 /* APIHandler.swift in Sources */,
+				0095112B1FD81EEF008909EA /* ContactDetailsViewController.swift in Sources */,
 				AE901D271FD70E9C0016DF95 /* ContactRequestResponseHandler.swift in Sources */,
 				AE901D181FD704B50016DF95 /* ContactsViewController.swift in Sources */,
 				AE901D1B1FD706330016DF95 /* Contact.swift in Sources */,

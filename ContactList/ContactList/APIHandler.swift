@@ -24,8 +24,7 @@ class APIHandler {
         
         let task = session.dataTask(with: request) { (data: Data?, reponse: URLResponse?, error: Error?) in
             
-            //not used response - used to check http status error
-            
+            //currently not using response - used to check http status error
             if let data = data {
                 self.delegate?.response(data as Data?, error: nil)
             } else {
